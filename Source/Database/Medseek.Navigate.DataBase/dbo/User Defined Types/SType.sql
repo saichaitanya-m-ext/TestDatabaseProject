@@ -1,0 +1,3 @@
+﻿CREATE TYPE [dbo].[SType]
+    FROM VARCHAR (10) NULL;
+

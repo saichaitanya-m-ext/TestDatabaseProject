@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[ADT_PhysicianRole] (
+    [ADTPhysicianRoleID]                             INT           IDENTITY (1, 1) NOT NULL,
+    [Patient_SetID]                                  VARCHAR (100) NULL,
+    [ActionCode]                                     VARCHAR (150) NULL,
+    [Role]                                           VARCHAR (150) NULL,
+    [PhysicianNames_PersonIdentifier]                VARCHAR (150) NULL,
+    [PhysicianNames_FamilyName]                      VARCHAR (150) NULL,
+    [PhysicianNames_GivenName]                       VARCHAR (150) NULL,
+    [PhysicianNames_FurtherGivenName]                VARCHAR (150) NULL,
+    [PhysicianNames_Suffix]                          VARCHAR (150) NULL,
+    [PhysicianNames_Prefix]                          VARCHAR (150) NULL,
+    [PhysicianNames_Degree]                          VARCHAR (150) NULL,
+    [PersonLocation_PointOfCare]                     VARCHAR (150) NULL,
+    [PersonLocation_Room]                            VARCHAR (150) NULL,
+    [PersonLocation_Bed]                             VARCHAR (150) NULL,
+    [PersonLocation_Facility]                        VARCHAR (150) NULL,
+    [PersonLocation_LocationStatus]                  VARCHAR (150) NULL,
+    [PersonLocation_PersonLocationType]              VARCHAR (150) NULL,
+    [PersonLocation_Building]                        VARCHAR (150) NULL,
+    [PersonLocation_Floor]                           VARCHAR (150) NULL,
+    [PersonLocation_LocationDescription]             VARCHAR (150) NULL,
+    [PersonLocation_ComprehensiveLocationIdentifier] VARCHAR (150) NULL,
+    [PersonLocation_AssigningAuthorityForLocation]   VARCHAR (150) NULL
+);
+

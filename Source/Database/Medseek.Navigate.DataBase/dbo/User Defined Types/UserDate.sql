@@ -1,0 +1,3 @@
+﻿CREATE TYPE [dbo].[UserDate]
+    FROM DATETIME NULL;
+

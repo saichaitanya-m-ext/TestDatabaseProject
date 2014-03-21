@@ -1,0 +1,61 @@
+﻿CREATE TABLE [dbo].[DocumentDisease] (
+    [LibraryID]            [dbo].[KeyID]      NOT NULL,
+    [DiseaseID]            [dbo].[KeyID]      NOT NULL,
+    [CreatedByUserId]      [dbo].[KeyID]      NOT NULL,
+    [CreatedDate]          [dbo].[UserDate]   CONSTRAINT [DF_DocumentDisease_CreatedDate] DEFAULT (getdate()) NOT NULL,
+    [LastModifiedByUserId] [dbo].[KeyID]      NULL,
+    [LastModifiedDate]     [dbo].[UserDate]   NULL,
+    [StatusCode]           [dbo].[StatusCode] CONSTRAINT [DF_DocumentDisease_StatusCode] DEFAULT ('A') NOT NULL,
+    CONSTRAINT [PK_DocumentDisease] PRIMARY KEY CLUSTERED ([LibraryID] ASC, [DiseaseID] ASC) WITH (FILLFACTOR = 25),
+    CONSTRAINT [FK_DocumentDisease_Disease] FOREIGN KEY ([DiseaseID]) REFERENCES [dbo].[Disease] ([DiseaseId]),
+    CONSTRAINT [FK_DocumentDisease_Library] FOREIGN KEY ([LibraryID]) REFERENCES [dbo].[Library] ([LibraryId])
+);
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_Description', @value = N'Documents in the library associated with a specific disease', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'DocumentDisease';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_Description', @value = N'Foreign key to the Library Table', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'DocumentDisease', @level2type = N'COLUMN', @level2name = N'LibraryID';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_Description', @value = N'Foreign key to the Disease Table', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'DocumentDisease', @level2type = N'COLUMN', @level2name = N'DiseaseID';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Description', @value = 'Foreign key to the "Users" table (column "UserId"); defaults to the <User ID> of the System User that inserted the data in the table.', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'DocumentDisease', @level2type = N'COLUMN', @level2name = N'CreatedByUserId';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_Description', @value = N'Foreign key to the Users table indicating the user that created the Record', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'DocumentDisease', @level2type = N'COLUMN', @level2name = N'CreatedByUserId';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Description', @value = 'Date/Time on which the row of data was inserted in the table; defaults to the Current Date/Time at which the data was inserted.', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'DocumentDisease', @level2type = N'COLUMN', @level2name = N'CreatedDate';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_Description', @value = N'Date the record was created', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'DocumentDisease', @level2type = N'COLUMN', @level2name = N'CreatedDate';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Description', @value = 'Foreign key to the "Users" table (column "UserId"); the <User ID> of the System User that last modified the data in the table.', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'DocumentDisease', @level2type = N'COLUMN', @level2name = N'LastModifiedByUserId';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_Description', @value = N'Foreign key to the User Table indicating the user that last modified the record', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'DocumentDisease', @level2type = N'COLUMN', @level2name = N'LastModifiedByUserId';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Description', @value = 'Date/Time on which the row of data in the table was last modified.', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'DocumentDisease', @level2type = N'COLUMN', @level2name = N'LastModifiedDate';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_Description', @value = N'Date the record was last modified', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'DocumentDisease', @level2type = N'COLUMN', @level2name = N'LastModifiedDate';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'MS_Description', @value = N'Status Code Valid values are I = Inactive, A = Active', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'DocumentDisease', @level2type = N'COLUMN', @level2name = N'StatusCode';
+

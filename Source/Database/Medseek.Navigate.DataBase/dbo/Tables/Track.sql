@@ -1,0 +1,108 @@
+﻿CREATE TABLE [dbo].[Track] (
+    [UserId]                           [dbo].[KeyID]            IDENTITY (1, 1) NOT NULL,
+    [UserLoginName]                    NVARCHAR (256)           NULL,
+    [FirstName]                        [dbo].[FirstName]        NULL,
+    [MiddleName]                       [dbo].[MiddleName]       NULL,
+    [LastName]                         [dbo].[LastName]         NULL,
+    [UserNameSuffix]                   [dbo].[Code]             NULL,
+    [UserNamePrefix]                   [dbo].[Code]             NULL,
+    [Gender]                           [dbo].[Unit]             NULL,
+    [Title]                            [dbo].[ShortDescription] NULL,
+    [IsProvider]                       [dbo].[IsIndicator]      NULL,
+    [IsPatient]                        [dbo].[IsIndicator]      NULL,
+    [IsPhysician]                      [dbo].[IsIndicator]      NULL,
+    [NPINumber]                        [dbo].[PIN]              NULL,
+    [SSN]                              [dbo].[SSN]              NULL,
+    [AgreedToTermsAndConditions]       [dbo].[IsIndicator]      NULL,
+    [ProfessionalTypeID]               [dbo].[KeyID]            NULL,
+    [EmailIdPrimary]                   [dbo].[EmailId]          NULL,
+    [EmailIdAlternate]                 [dbo].[EmailId]          NULL,
+    [PhoneNumberPrimary]               [dbo].[Phone]            NULL,
+    [PhoneNumberExtensionPrimary]      VARCHAR (25)             NULL,
+    [PhoneNumberAlternate]             [dbo].[Phone]            NULL,
+    [PhoneNumberExtensionAlternate]    VARCHAR (25)             NULL,
+    [Fax]                              VARCHAR (10)             NULL,
+    [AddressLine1]                     [dbo].[Address]          NULL,
+    [AddressLine2]                     [dbo].[Address]          NULL,
+    [City]                             [dbo].[City]             NULL,
+    [State]                            [dbo].[State]            NULL,
+    [ZipCode]                          VARCHAR (10)             NULL,
+    [DateOfBirth]                      [dbo].[UserDate]         NULL,
+    [CareTeamId]                       [dbo].[KeyID]            NULL,
+    [MemberNum]                        [dbo].[SourceName]       NULL,
+    [AvatarInfo]                       [dbo].[SourceName]       NULL,
+    [ThemeColorInfo]                   [dbo].[SourceName]       NULL,
+    [StartDate]                        [dbo].[UserDate]         NULL,
+    [EndDate]                          [dbo].[UserDate]         NULL,
+    [LastGoodLoginDateTime]            [dbo].[UserDate]         NULL,
+    [EmergencyContactName]             [dbo].[FirstName]        NULL,
+    [EmergencyContactPhone]            [dbo].[Phone]            NULL,
+    [MedicalRecordNumber]              VARCHAR (20)             NULL,
+    [AcceptFaxCommunications]          [dbo].[IsIndicator]      NULL,
+    [AcceptEmailCommunications]        [dbo].[IsIndicator]      NULL,
+    [AcceptSMSCommunications]          [dbo].[IsIndicator]      NULL,
+    [AcceptMassCommunications]         [dbo].[IsIndicator]      NULL,
+    [AcceptPreventativeCommunications] [dbo].[IsIndicator]      NULL,
+    [PreferedCommunicationTypeID]      [dbo].[KeyID]            NULL,
+    [EthnicityID]                      [dbo].[KeyID]            NULL,
+    [RaceID]                           [dbo].[KeyID]            NULL,
+    [CallTimePreferenceId]             [dbo].[KeyID]            NULL,
+    [IsDeceased]                       [dbo].[IsIndicator]      NULL,
+    [CreatedByUserId]                  [dbo].[KeyID]            NULL,
+    [CreatedDate]                      [dbo].[UserDate]         NULL,
+    [LastModifiedByUserId]             [dbo].[KeyID]            NULL,
+    [LastModifiedDate]                 [dbo].[UserDate]         NULL,
+    [UserStatusCode]                   [dbo].[StatusCode]       NOT NULL,
+    [IsMedicare]                       [dbo].[IsIndicator]      NULL,
+    [IsMedicaid]                       [dbo].[IsIndicator]      NULL,
+    [SMSPhoneNumber]                   [dbo].[Phone]            NULL,
+    [hasHeartDisease]                  [dbo].[IsIndicator]      NULL,
+    [hasLiverDisease]                  [dbo].[IsIndicator]      NULL,
+    [hasKidneyDisease]                 [dbo].[IsIndicator]      NULL,
+    [hasLungDisease]                   [dbo].[IsIndicator]      NULL,
+    [hasCancerHistory]                 [dbo].[IsIndicator]      NULL,
+    [Comments]                         [dbo].[LongDescription]  NULL,
+    [hasSignificantAlcoholUse]         [dbo].[IsIndicator]      NULL,
+    [isTobaccoUser]                    [dbo].[IsIndicator]      NULL,
+    [hasFinancialBarrier]              [dbo].[IsIndicator]      NULL,
+    [hasMentalHealthBarrier]           [dbo].[IsIndicator]      NULL,
+    [hasEducationLiteracyBarrier]      [dbo].[IsIndicator]      NULL,
+    [hasLanguageCulturalBarrier]       [dbo].[IsIndicator]      NULL,
+    [hasTransportationIssuesBarrier]   [dbo].[IsIndicator]      NULL,
+    [isFrequentNoShow]                 [dbo].[IsIndicator]      NULL,
+    [BarrierComments]                  [dbo].[LongDescription]  NULL,
+    [IsObesity]                        [dbo].[IsIndicator]      NULL,
+    [IsInactiveLifeStyle]              [dbo].[IsIndicator]      NULL,
+    [SocialAssessmentText]             VARCHAR (1000)           NULL,
+    [FunctionalAssessmentText]         VARCHAR (1000)           NULL,
+    [EnvironmentalAssessmentText]      VARCHAR (1000)           NULL,
+    [isVisionImpaired]                 [dbo].[IsIndicator]      NULL,
+    [isHearingImpaired]                [dbo].[IsIndicator]      NULL,
+    [UserBySkin]                       VARCHAR (15)             NULL,
+    [DefaultTaskCareProviderId]        [dbo].[KeyID]            NULL,
+    [BloodGroupId]                     [dbo].[KeyID]            NULL,
+    [PCPId]                            [dbo].[KeyID]            NULL,
+    [ProviderTINNumber]                [dbo].[PIN]              NULL,
+    [CoverageTierId]                   [dbo].[KeyID]            NULL,
+    [MedicarePrimeIndicator]           CHAR (1)                 NULL,
+    [MedicarePrimeBeginDate]           DATETIME                 NULL,
+    [MedicarePrimeEndDate]             DATETIME                 NULL,
+    [InternalProviderId]               VARCHAR (9)              NULL
+);
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Description', @value = 'Foreign key to the "Users" table (column "UserId"); defaults to the <User ID> of the System User that inserted the data in the table.', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'Track', @level2type = N'COLUMN', @level2name = N'CreatedByUserId';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Description', @value = 'Date/Time on which the row of data was inserted in the table; defaults to the Current Date/Time at which the data was inserted.', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'Track', @level2type = N'COLUMN', @level2name = N'CreatedDate';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Description', @value = 'Foreign key to the "Users" table (column "UserId"); the <User ID> of the System User that last modified the data in the table.', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'Track', @level2type = N'COLUMN', @level2name = N'LastModifiedByUserId';
+
+
+GO
+EXECUTE sp_addextendedproperty @name = N'Description', @value = 'Date/Time on which the row of data in the table was last modified.', @level0type = N'SCHEMA', @level0name = N'dbo', @level1type = N'TABLE', @level1name = N'Track', @level2type = N'COLUMN', @level2name = N'LastModifiedDate';
+

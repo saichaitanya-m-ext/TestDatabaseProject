@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{85162B06-786D-450E-9B84-450317694637}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{5A8626DC-A144-4694-A9AD-122065A4D461}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MEDSEEK.Navigate.Framework.Microservices", "Source\MEDSEEK.Navigate.Framework.Microservices\MEDSEEK.Navigate.Framework.Microservices.csproj", "{13FB2C42-0921-4D28-A301-CCD43EDA1E51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MEDSEEK.Navigate.UserManagementService", "Source\MEDSEEK.Navigate.UserManagementService\MEDSEEK.Navigate.UserManagementService.csproj", "{F6280505-E80C-4C3E-96EC-7BD06B18ABB7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MEDSEEK", "MEDSEEK", "{6975F01C-55B9-48E0-A496-BFD70BDD05D9}"
+	ProjectSection(SolutionItems) = preProject
+		bin\MEDSEEK\Medseek.Util.dll = bin\MEDSEEK\Medseek.Util.dll
+		bin\MEDSEEK\Medseek.Util.Ioc.Castle.dll = bin\MEDSEEK\Medseek.Util.Ioc.Castle.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{B6B95D03-D7F4-477C-9B12-F401DF35935B}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{AA95EFF0-3562-4ADD-90DD-F8CE2923ECF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MEDSEEK.Navigate.Database.Context", "Source\Database\MEDSEEK.Navigate.Database.Context\MEDSEEK.Navigate.Database.Context.csproj", "{8CDCECE1-94C2-4EC1-B4F9-E28FDA37EAFC}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Medseek.Navigate.DataBase", "Source\Database\Medseek.Navigate.DataBase\Medseek.Navigate.DataBase.sqlproj", "{91CEE7B0-64FC-4A34-8AAA-414788C47C3D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{13FB2C42-0921-4D28-A301-CCD43EDA1E51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13FB2C42-0921-4D28-A301-CCD43EDA1E51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13FB2C42-0921-4D28-A301-CCD43EDA1E51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13FB2C42-0921-4D28-A301-CCD43EDA1E51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6280505-E80C-4C3E-96EC-7BD06B18ABB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6280505-E80C-4C3E-96EC-7BD06B18ABB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6280505-E80C-4C3E-96EC-7BD06B18ABB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6280505-E80C-4C3E-96EC-7BD06B18ABB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CDCECE1-94C2-4EC1-B4F9-E28FDA37EAFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CDCECE1-94C2-4EC1-B4F9-E28FDA37EAFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CDCECE1-94C2-4EC1-B4F9-E28FDA37EAFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CDCECE1-94C2-4EC1-B4F9-E28FDA37EAFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91CEE7B0-64FC-4A34-8AAA-414788C47C3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91CEE7B0-64FC-4A34-8AAA-414788C47C3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91CEE7B0-64FC-4A34-8AAA-414788C47C3D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{91CEE7B0-64FC-4A34-8AAA-414788C47C3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91CEE7B0-64FC-4A34-8AAA-414788C47C3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91CEE7B0-64FC-4A34-8AAA-414788C47C3D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{13FB2C42-0921-4D28-A301-CCD43EDA1E51} = {85162B06-786D-450E-9B84-450317694637}
+		{F6280505-E80C-4C3E-96EC-7BD06B18ABB7} = {85162B06-786D-450E-9B84-450317694637}
+		{AA95EFF0-3562-4ADD-90DD-F8CE2923ECF8} = {85162B06-786D-450E-9B84-450317694637}
+		{6975F01C-55B9-48E0-A496-BFD70BDD05D9} = {5A8626DC-A144-4694-A9AD-122065A4D461}
+		{8CDCECE1-94C2-4EC1-B4F9-E28FDA37EAFC} = {AA95EFF0-3562-4ADD-90DD-F8CE2923ECF8}
+		{91CEE7B0-64FC-4A34-8AAA-414788C47C3D} = {AA95EFF0-3562-4ADD-90DD-F8CE2923ECF8}
+	EndGlobalSection
+EndGlobal
