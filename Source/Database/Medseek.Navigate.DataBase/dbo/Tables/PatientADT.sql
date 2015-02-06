@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[PatientADT] (
+    [PatientADTId]         [dbo].[KeyID]       IDENTITY (1, 1) NOT NULL,
+    [PatientId]            [dbo].[KeyID]       NOT NULL,
+    [EventAdmitdate]       [dbo].[UserDate]    NULL,
+    [EventDischargedate]   [dbo].[UserDate]    NULL,
+    [IsReadmit]            [dbo].[IsIndicator] NULL,
+    [FacilityId]           [dbo].[KeyID]       NULL,
+    [AdmitType]            CHAR (1)            NULL,
+    [DischargeTo]          VARCHAR (3)         NULL,
+    [MessageAdmitdate]     [dbo].[UserDate]    NULL,
+    [VisitAdmitdate]       [dbo].[UserDate]    NULL,
+    [MessageDischargedate] [dbo].[UserDate]    NULL,
+    [VisitDischargedate]   [dbo].[UserDate]    NULL,
+    [CreatedByUserId]      [dbo].[KeyID]       NOT NULL,
+    [CreatedDate]          [dbo].[UserDate]    CONSTRAINT [DF_PatientADT_CreatedDate] DEFAULT (getdate()) NOT NULL,
+    [LastModifiedUserId]   [dbo].[KeyID]       NULL,
+    [LastModifiedDate]     [dbo].[UserDate]    NULL,
+    [RefferingDoctor]      VARCHAR (100)       NULL,
+    [AdmittingDoctor]      VARCHAR (100)       NULL,
+    [AttendingDoctor]      VARCHAR (100)       NULL,
+    CONSTRAINT [PK_PatientADT] PRIMARY KEY CLUSTERED ([PatientADTId] ASC),
+    CONSTRAINT [FK_PatientADT_Patient] FOREIGN KEY ([PatientId]) REFERENCES [dbo].[Patient] ([PatientID]),
+    CONSTRAINT [FK_PatientADT_Provider] FOREIGN KEY ([FacilityId]) REFERENCES [dbo].[Provider] ([ProviderID])
+);
+

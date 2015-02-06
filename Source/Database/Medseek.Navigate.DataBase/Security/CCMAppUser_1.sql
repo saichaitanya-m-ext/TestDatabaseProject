@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [CCMAppUser]
+    WITH PASSWORD = N'Vdcfpyztn_vokg2vhq&mzMgamsFT7_&#$!~<ag#neOg{Equy', SID = 0xE7F1906EB555054F8DBF5C6FB3B14BD9, DEFAULT_LANGUAGE = [us_english], CHECK_POLICY = OFF;
+

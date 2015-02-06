@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[CodeSetBodyVitalSign] (
+    [VitalSignCodeID]             [dbo].[KeyID]      IDENTITY (1, 1) NOT NULL,
+    [VitalSignCode]               VARCHAR (1)        NOT NULL,
+    [VitalSignName]               VARCHAR (30)       NOT NULL,
+    [VitalSignDescription]        VARCHAR (255)      NULL,
+    [MeasureValueLow]             NUMERIC (5)        NULL,
+    [MeasureValueLowStandardUOM]  [dbo].[KeyID]      NULL,
+    [MeasureValueHigh]            NUMERIC (5)        NULL,
+    [MeasureValueHighStandardUOM] [dbo].[KeyID]      NULL,
+    [DataSourceID]                [dbo].[KeyID]      NULL,
+    [DataSourceFileID]            [dbo].[KeyID]      NULL,
+    [StatusCode]                  [dbo].[StatusCode] CONSTRAINT [DF_CodeSetBodyVitalSign_StatusCode] DEFAULT ('A') NOT NULL,
+    [CreatedByUserId]             INT                NOT NULL,
+    [CreatedDate]                 DATETIME           CONSTRAINT [DF_CodeSetBodyVitalSign_CreatedDate] DEFAULT (getdate()) NOT NULL,
+    [LastModifiedByUserId]        INT                NULL,
+    [LastModifiedDate]            DATETIME           NULL,
+    CONSTRAINT [PK_CodeSetBodyVitalSign] PRIMARY KEY CLUSTERED ([VitalSignCodeID] ASC) ON [FG_Codesets],
+    CONSTRAINT [FK_CodeSetBodyVitalSign_CodeSetDataSource] FOREIGN KEY ([DataSourceID]) REFERENCES [dbo].[CodeSetDataSource] ([DataSourceId]),
+    CONSTRAINT [FK_CodeSetBodyVitalSign_CodeSetUnitsOfMeasure] FOREIGN KEY ([MeasureValueLowStandardUOM]) REFERENCES [dbo].[CodeSetUnitOfMeasure] ([UnitOfMeasureID]),
+    CONSTRAINT [FK_CodeSetBodyVitalSign_DataSourceFile] FOREIGN KEY ([DataSourceFileID]) REFERENCES [dbo].[DataSourceFile] ([DataSourceFileID]),
+    CONSTRAINT [FK_CodeSetBodyVitalSign_MeasureValueHighStandard] FOREIGN KEY ([MeasureValueHighStandardUOM]) REFERENCES [dbo].[CodeSetUnitOfMeasure] ([UnitOfMeasureID]),
+    CONSTRAINT [UQ_CodeSetBodyVitalSign_VitalSignCode] UNIQUE NONCLUSTERED ([VitalSignCode] ASC) WITH (FILLFACTOR = 100) ON [FG_Codesets_NCX],
+    CONSTRAINT [UQ_CodeSetBodyVitalSign_VitalSignName] UNIQUE NONCLUSTERED ([VitalSignName] ASC) WITH (FILLFACTOR = 100) ON [FG_Codesets_NCX]
+);
+

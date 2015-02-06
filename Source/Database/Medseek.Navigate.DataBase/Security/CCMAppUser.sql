@@ -1,0 +1,2 @@
+﻿CREATE USER [CCMAppUser] FOR LOGIN [CCMAppUser];
+

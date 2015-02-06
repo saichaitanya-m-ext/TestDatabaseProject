@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[CodeSetCounty] (
+    [CountyID]             [dbo].[KeyID]            IDENTITY (1, 1) NOT NULL,
+    [CountyCode]           VARCHAR (5)              NOT NULL,
+    [CountyName]           [dbo].[ShortDescription] NOT NULL,
+    [CountryID]            [dbo].[KeyID]            CONSTRAINT [DF_CodeSetCounty_CountryID] DEFAULT ('1') NULL,
+    [StateID]              [dbo].[KeyID]            NULL,
+    [StateDescription]     [dbo].[LongDescription]  NULL,
+    [SortOrder]            SMALLINT                 CONSTRAINT [DF_CodeSetCounty_SortOrder] DEFAULT ('1') NULL,
+    [DataSourceID]         [dbo].[KeyID]            NULL,
+    [DataSourceFileID]     [dbo].[KeyID]            NULL,
+    [StatusCode]           [dbo].[StatusCode]       CONSTRAINT [DF_CodeSetCounty_StatusCode] DEFAULT ('A') NOT NULL,
+    [CreatedByUserId]      INT                      NOT NULL,
+    [CreatedDate]          DATETIME                 CONSTRAINT [DF_CodeSetCounty_CreatedDate] DEFAULT (getdate()) NOT NULL,
+    [LastModifiedByUserId] INT                      NULL,
+    [LastModifiedDate]     DATETIME                 NULL,
+    CONSTRAINT [PK_CodeSetCounty] PRIMARY KEY CLUSTERED ([CountyID] ASC) ON [FG_Codesets],
+    CONSTRAINT [FK_CodeSetCounty_CodeSetCountry] FOREIGN KEY ([CountryID]) REFERENCES [dbo].[CodeSetCountry] ([CountryID]),
+    CONSTRAINT [FK_CodeSetCounty_CodeSetDataSource] FOREIGN KEY ([DataSourceID]) REFERENCES [dbo].[CodeSetDataSource] ([DataSourceId]),
+    CONSTRAINT [FK_CodeSetCounty_CodeSetState] FOREIGN KEY ([StateID]) REFERENCES [dbo].[CodeSetState] ([StateID]),
+    CONSTRAINT [FK_CodeSetCounty_DataSourceFile] FOREIGN KEY ([DataSourceFileID]) REFERENCES [dbo].[DataSourceFile] ([DataSourceFileID]),
+    CONSTRAINT [UQ_CodeSetCounty_CountyCode] UNIQUE NONCLUSTERED ([CountyCode] ASC) WITH (FILLFACTOR = 100) ON [FG_Codesets_NCX],
+    CONSTRAINT [UQ_CodeSetCounty_Name] UNIQUE NONCLUSTERED ([CountyName] ASC) WITH (FILLFACTOR = 100) ON [FG_Codesets_NCX],
+    CONSTRAINT [UQ_CodeSetCounty_State] UNIQUE NONCLUSTERED ([StateID] ASC) WITH (FILLFACTOR = 100) ON [FG_Codesets_NCX]
+);
+

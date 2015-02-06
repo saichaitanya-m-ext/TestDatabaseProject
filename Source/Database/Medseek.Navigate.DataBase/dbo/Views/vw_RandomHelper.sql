@@ -1,0 +1,1 @@
+﻿CREATE VIEW [dbo].[vw_RandomHelper] as Select Rand() as RandomNumber

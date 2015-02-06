@@ -1,0 +1,3 @@
+﻿CREATE TYPE [dbo].[PIN]
+    FROM VARCHAR (30) NOT NULL;
+

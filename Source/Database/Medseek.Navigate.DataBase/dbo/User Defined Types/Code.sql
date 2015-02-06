@@ -1,0 +1,3 @@
+﻿CREATE TYPE [dbo].[Code]
+    FROM VARCHAR (10) NULL;
+

@@ -1,0 +1,3 @@
+﻿CREATE TYPE [dbo].[Fax]
+    FROM VARCHAR (10) NULL;
+

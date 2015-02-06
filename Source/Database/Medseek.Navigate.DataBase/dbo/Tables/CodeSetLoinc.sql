@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[CodeSetLoinc] (
+    [LoincCodeId]          INT                      IDENTITY (1, 1) NOT NULL,
+    [LoincCode]            VARCHAR (10)             NOT NULL,
+    [ShortDescription]     VARCHAR (500)            NULL,
+    [LongDescription]      VARCHAR (4000)           NULL,
+    [Component]            VARCHAR (500)            NULL,
+    [Property]             [dbo].[LongDescription]  NULL,
+    [TimeAspect]           VARCHAR (25)             NULL,
+    [System]               [dbo].[ShortDescription] NULL,
+    [ScaleType]            VARCHAR (10)             NULL,
+    [MethodType]           [dbo].[ShortDescription] NULL,
+    [Class]                VARCHAR (25)             NULL,
+    [CreatedByUserId]      INT                      NOT NULL,
+    [CreatedDate]          DATETIME                 CONSTRAINT [DF_CodeSetLOINC_CreatedDate] DEFAULT (getdate()) NOT NULL,
+    [LastModifiedByUserId] INT                      NULL,
+    [LastModifiedDate]     DATETIME                 NULL,
+    [BeginDate]            DATE                     NOT NULL,
+    [EndDate]              DATE                     CONSTRAINT [DF_CodeSetLOINC_EndDate] DEFAULT ('01-01-2100') NOT NULL,
+    [StatusCode]           VARCHAR (1)              CONSTRAINT [DF_CodeSetLOINC_StatusCode] DEFAULT ('A') NULL,
+    [DataSourceID]         INT                      NULL,
+    [DataSourceFileID]     INT                      NULL,
+    [CodeTable]            VARCHAR (20)             NULL,
+    CONSTRAINT [PK_CodeSetLOINC] PRIMARY KEY CLUSTERED ([LoincCodeId] ASC) ON [FG_Codesets],
+    CONSTRAINT [FK_CodeSetLOINC_DataSourceFile] FOREIGN KEY ([DataSourceFileID]) REFERENCES [dbo].[DataSourceFile] ([DataSourceFileID])
+);
+

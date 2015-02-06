@@ -1,0 +1,1427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8CDCECE1-94C2-4EC1-B4F9-E28FDA37EAFC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MEDSEEK.Navigate.Database.Context</RootNamespace>
+    <AssemblyName>MEDSEEK.Navigate.Database.Context</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\..\..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="aspnet_Membership_GetPasswordWithFormat_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Membership_GetPassword_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Membership_GetUserByName_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Membership_GetUserByUserId_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_PersonalizationAdministration_FindUserStateSizeAndCount_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_Profile_GetProperties_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="aspnet_UsersInRoles_RemoveUsersFromRoles_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dbAdmin_DelimitedSplit8K_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Nagivate.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Nagivate.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Nagivate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Nagivate.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Nagivate.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="udf_GetDateKeys_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="udf_QualityMeasureSelect_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="udf_SplitStringToTable_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_ConvertListToTable_Int32_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_ConvertListToTable_Int64_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_ConvertListToTable_String_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_GetAdhocRemaindersByTaskID_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_GetAgeEligiblePopulation2_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_GetAgeEligiblePopulation2_SelectedPopulation_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_GetAgeEligiblePopulation_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_GetAgeEligiblePopulation_SelectedPopulation_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_GetInsuredBenefits_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_GetInsuredBenefits_SelectedPopulation_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_GetInsureds2_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_GetInsureds2_SelectedPopulation_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_GetInsureds_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_GetInsureds_SelectedPopulation_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_GetNextCommunicationDetials_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_GetPatientPCPHistory_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_GetPatientPCPInfo_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_GetPatients_BodyVitalSigns_BloodPressure_SelectedPopulation_MP_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_GetPatients_BodyVitalSigns_BloodPressure_SelectedPopulation_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_GetProgramRemaindersByTaskID_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_GetRemaindersByTaskID_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_GetUserPCPInfo_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetDrugInfo_ByTableName2_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetDrugInfo_ByTableName_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetECTCodeInfo_ByTableName2_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetECTCodeInfo_ByTableName_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetPatients_EncouterClaims2_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetPatients_EncouterClaims2_SelectedPopulation_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetPatients_EncouterClaims_ALL2_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetPatients_EncouterClaims_ALL2_SelectedPopulation_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetPatients_EncouterClaims_ALL_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetPatients_EncouterClaims_ALL_SelectedPopulation_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetPatients_EncouterClaims_ByDiagnosis2_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetPatients_EncouterClaims_ByDiagnosis2_SelectedPopulation_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetPatients_EncouterClaims_ByDiagnosis_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetPatients_EncouterClaims_ByDiagnosis_SelectedPopulation_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetPatients_EncouterClaims_ByProcedure2_SelectedPopulation_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetPatients_EncouterClaims_ByProcedure_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetPatients_EncouterClaims_ByProcedure_SelectedPopulation_MP_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetPatients_EncouterClaims_ByProcedure_SelectedPopulation_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetPatients_EncouterClaims_ByProcedure_SelectedPopulation_SpecialtyContionEyeExam_MP_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetPatients_EncouterClaims_ByProcedure_SelectedPopulation_SpecialtyContionEyeExam_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetPatients_EncouterClaims_ByRevenue2_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetPatients_EncouterClaims_ByRevenue2_SelectedPopulation_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetPatients_EncouterClaims_ByRevenue_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetPatients_EncouterClaims_ByRevenue_SelectedPopulation_MP_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetPatients_EncouterClaims_ByRevenue_SelectedPopulation_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetPatients_EncouterClaims_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetPatients_EncouterClaims_SelectedPopulation_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetPatients_LabData2_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetPatients_LabData2_SelectedPopulation_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetPatients_LabData_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetPatients_LabData_SelectedPopulation_MP_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetPatients_LabData_SelectedPopulation_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetPatients_RxClaims2_SelectedPopulation_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetPatients_RxClaims_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetPatients_RxClaims_SelectedPopulation_MP_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ufn_HEDIS_GetPatients_RxClaims_SelectedPopulation_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ACGADGCodes_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ACGEDCCodes_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ACGMEDCCodes_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ACGpatientConditions_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ACGPatientPharmacySpans_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ACGRXMGCodes_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ACGSchedule_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Activity_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_AddressType_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_AnswerType_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Answer_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ApplicationErrorLog_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ApplicationError_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_AssignmentEnroll_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_AssignmentTaskTypeCommunications_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Assignment_CareTeamTaskRights_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Assignment_CareTeamTreeView_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Assignment_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Assignment_TaskBundleTreeView_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Assignment_Tasks_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_AuditPatientsName_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_BloodTypes_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_BloodTypes_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CallTimePreference_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CareManagementSummary_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CareManagementSummary_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CareProviderDashBoard_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CareProviderDashBoard_MissedOpportunity_Filter_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CareProviderDashBoard_MyTask_Filter_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CareProvider_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CareTeamMembders_SelectedByCareProvider_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CareTeamMembers_ByProgram_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CareTeamMembers_Select_ByCareTeamUser_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CareTeamMembers_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CareTeamTaskRights_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CareTeam_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CareTeam_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Claim_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Clinic_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CodeGropuingBuildDefinition_InternalOrHEDIS_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CodeGropuingBuildDefinition_PDF_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CodeGrouperSummary_SELECT_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CodeGroupingCodeType_BySource_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CodeGroupingSource_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CodeGrouping_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Usp_CodeGrouping_Filter_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CodeGrouping_Search_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CodeGrouping_VersionHistory_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CodeGroupInlineSearch_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CodegroupSummary_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CodeSetDrug_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CodeSetDrug_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CodeSetICDGroups_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CodeSetICDGroups_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CodeSetICD_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CodeSetLoincCode_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CodeSetProcedure_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CodeTypeGrouperSummary_SELECT_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CodeTypeICD_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CohortList_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CommunicationTemplateToken_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CommunicationTemplate_CommunicationType_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CommunicationTemplate_ForEmailAndLetter_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CommunicationTemplate_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CommunicationTemplate_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CommunicationType_Select_All_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CommunicationType_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Communication_CommunicationCohorts_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Communication_MessageDetail_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Communication_PreviewCommunication_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Communication_PreviewNotification_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Country_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_County_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CoverageTier_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_CPTLabTests_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_DashBoard_MissedOpportunity_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Dashboard_UtilityAndCost_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_DataSource_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_dbAdmin_CheckDependencies_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_dbAdmin_CheckNewDatainXDays_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_dbAdmin_MissingIndex_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_DiseaseTherapeuticClass_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Disease_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Disease_SpecificCareGap_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Disease_StandardSelect_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_DocumentCategory_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_DocumentDisease_Search_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_DocumentDisease_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_DocumentProgram_Search_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_DocumentProgram_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_DocumentType_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_DocumentType_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_EmailAddressType_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_EmployerGroup_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_EmploymentStatus_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_EpisodeGroupersAndDisease_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Ethnicity_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ExternalCareProvider_Search_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ExternalCareProvider_UserProviders_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ExternalCareProvider_User_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_GetManagedPopulation_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_getUserActivityLog_report_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Get_SMSIntegrationforPatient_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_GridResolution_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_HealthCareQualityBCategory_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_HealthCareQualityCategory_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_HealthCareQualityMeasureNrDrDefinition_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_HealthCareQualityMeasure_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_HealthCareQualityStandardCategoryMeasure_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_HealthCareQualityStandard_Insert_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_HealthCareQualityStandard_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_HealthIndicatorsAndBarriers_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_HealthStatusScoreOrganization_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_HealthStatusScoreOrganization_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_HealthStatusScoreType_Select_ByHealthStatusScoreType_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_HealthStatusScoreType_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_HealthStatusScoreType_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ImmunizationSchedule_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Immunizations_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Immunizations_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_InboxSharing_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_InboxSharing_Select_SharedInbox_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Usp_InlineMeasure_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_InsuranceGroupAndPlan_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_InsuranceGroupPlan_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_InsuranceGroup_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_InsuranceGroup_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_InsuranceGroup_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_InternalCareProvider_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_LabMeasureHistory_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_LabMeasureProcedureDiseaseProgram_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_LabMeasure_Alert_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_LabMeasure_Select_ByPatientUserId_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_LabMeasure_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_LabOrPhysicalExamination_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Labs_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_LabTestMeasure_SelectByLabTestId_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_LabTestMeasure_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_LabTests_Search_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_LabTests_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_LabTests_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Language_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Library_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Library_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_LifeStyleGoals_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Listing_DrugCodeSearch_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_LoginAudit_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_LoincCodeMaintance_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_LookUpCodeType_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_MaritalStatus_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_MeasureAdministrativeClassification_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Usp_MeasureOption_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_MeasureSynonyms_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_MeasureTextOption_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_MeasureType_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_MeasureType_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_MeasureUOM_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_MeasureUOM_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_MeasureVital_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Measure_Search_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Measure_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Measure_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_MedicalCondition_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_MedicalHistoryOrRiskFactors_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_MedicalProblemClassification_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_MedicalProblemClassification_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_MedicalProblem_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_MedicalProblem_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_MetricDocument_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_MetricGoals_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_MetricGoals_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_MetricnumeratorFrequency_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_MetricReportConfiguration_ByDrID_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_MetricReportConfiguration_ByReportName_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_MetricReportConfiguration_Search_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_MetricReportConfiguration_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Metrics_Search_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Metrics_Search_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Metrics_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Metric_UsageSelect_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_MNRnumber_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_NamePrefix_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_NameSuffix_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_NPOLkupCodeSupplemental_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_NPOLkupSupplemental_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_NPOPatientSupplementalForm_Excel_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_NumeratorDefinition_Search_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Numerator_MeasureSelect_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Numerator_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ObstetricalConditions_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ObstetricalConditions_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Operator_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_OrganizationTree_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Organization_Facility_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PageAccessed_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PatientActivity_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PatientAudit_PatientSearch_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PatientCarePlan_DD_Wrapper_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PatientCarePlan_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_patientDashbmoard_PDFExcel_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PatientDashBoard_CarePlan_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PatientDashBoard_Documents_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PatientDashBoard_Home_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PatientDashBoard_OutcomeMetric_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PatientDashBoard_PEM_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PatientDashboard_UserAppointments_Wrapper_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PatientEducationMaterial_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PatientEmpStatus_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PatientGoalProgressLog_Select_ByGoal_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PatientGoalProgressLog_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PatientGoal_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PatientsName_Search_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Patients_Select_MergeLetters_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PatientUserSearch_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Patient_ProfileSelect_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Patient_VisitPlan_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PCPName_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PDCodeGroups_Search_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PD_Communications_wrapper_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PD_Medications_wrapper_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PEMDocument_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PhoneType_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Physician_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PopulationDefinitionCriteriaByDefinitionID_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PopulationDefinitionCriteria_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PopulationDefinitionDependencies_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PopulationDefinitionFilter_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PopulationDefinitionUserCount_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PopulationDefinition_Search_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PopulationDefinition_Search_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PopulationDefinition_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PopulationDefinition_Usage_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PopulationDefPanelConfigurationByPopulationDefinitionID_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PopulationDefPanelConfiguration_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PopulationMetricsReports_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PopulationOrConditionDefinitions_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Portals_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PQRIProviderPersonalizationByProvider_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PQRIProviderPersonalization_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PQRIQualityMeasureDenominator_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PQRIQualityMeasureGroupCorrelate_SelectGender_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PQRIQualityMeasureGroupDenominator_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PQRIQualityMeasureGroupToMeasure_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PQRIQualityMeasureGroup_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PQRIQualityMeasureGroup_Search_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PQRIQualityMeasureGroup_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PQRIQualityMeasureGroup_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PQRIQualityMeasureNumerator_MultiSelect_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PQRIQualityMeasureNumerator_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PQRIQualityMeasure_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PQRIQualityMeasure_Search_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PQRIQualityMeasure_SelectByMeasureID_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PQRIQualityMeasure_SelectByProviderID_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_PQRIQualityMeasure_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ProcedureMeasure_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ProfessionalType_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ProfessionalType_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ProgramDisease_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ProgramExclusionReasons_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ProgramExclusionReasons_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ProgramMappings_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ProgramProcedureConditionalFrequency_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ProgramProcedureFrequency_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ProgramProcedureTherapeuticDrugFrequency_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ProgramType_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Program_ByProviderID_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Program_Search_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Program_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Program_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ProviderName_Search_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ProviderRole_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Provider_ProfileSelect_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_QuestionaireAnalytics_DashBoard_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_QuestionaireQuestionSet_SelectByQuestionSetId_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_QuestionaireRecommendation_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_QuestionaireTitration_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_QuestionaireType_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_QuestionaireType_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Questionaire_Assignment_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Questionaire_Select_All_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Questionaire_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Questionaire_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Questionaire_Select_Survey_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Questionaire_Select_TreeView_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Questionaire_Select_Wrapper_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_QuestionnaireBranching_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_QuestionnaireFrequency_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_QuestionnaireScoring_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_QuestionsAndAnswers_ByQuestionaire_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_QuestionSet_SearchByQuestionSetId_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_QuestionSet_Select_ByQuestionaire_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_QuestionSet_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_QuestionSet_Select_IgnoreQuestionaire_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_QuestionType_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Question_QuestionSetQuestion_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Question_Select_ByQuestionSet_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Question_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Question_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Race_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Recommendation_Insert_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Recommendation_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Recommendation_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Relation_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ReportConditionConfiguration_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ReportNameType_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ReportSummary_Select_bkp_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_ReportSummary_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Reports_CareCoordination_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Reports_CareCoordination_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Reports_EpisodicGroup_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_SecurityRole_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Speciality_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_StandardOrganizations_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_StandardOrganization_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Standards_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_State_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_SubstanceAbuse_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_SubstanceAbuse_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_TaskAttemptsStatus_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_TaskAttempts_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_TaskBundlePatientEducationMaterial_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_TaskBundleProcedureFrequency_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_TaskBundleQuestionnaireFrequency_InsertUpdate_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_TaskBundle_SelectByBundleID_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_TaskBundle_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_TaskBundle_Summary_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_TaskBundle_Usage_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_TaskDueDates_Missed_Opportunity_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_TaskDueDates_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_TaskStatus_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_TaskTypeCommunications_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_TaskType_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_TaskType_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_TherapeuticClassDrug_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_TherapeuticClass_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_UIDefUserRoles_Select_All_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_UIDefUserRoles_Select_ByUserId_Multiroles_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_UIDef_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_UserAllergies_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_UserCommunication_SelectMore_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_UserCommunication_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_UserControl_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_UserDocument_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_UserHealthindicatorsBarriers_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_UserHealthStatusScore_PredictiveModeling_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_UserHealthStatusScore_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_UserIdByMemberNumber_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_UserImmunizations_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_UserInsurance_Patient_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_UserInsurance_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_UserMeasure_Select_ByUserId_MeasureId_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_UserMeasure_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_UserMedicationImmunizations_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_UserMessageRecipients_Select_Inbox_Archive_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_UserMessages_Recepients_Detail_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_UserMessages_Select_Sent_Draft_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_UserObstetricalConditions_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_UserPhoneCallLog_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_UserProblem_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_UserQuestionaire_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_UsersEpisode_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_UserSpeciality_SearchByUserId_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_UsersSecurityRoles_Select_ByUserId_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_UserStatus_Select_DD_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_UserSubstanceAbuse_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Users_HeaderInfoByUserId_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Users_Select_ByUserLoginName_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_Users_Select_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+    <Compile Include="usp_User_Profile_Select_Wrapper_Result.cs">
+      <DependentUpon>Nagivate.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="Nagivate.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Nagivate.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Nagivate.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Nagivate.edmx</DependentUpon>
+      <LastGenOutput>Nagivate.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Nagivate.edmx.diagram">
+      <DependentUpon>Nagivate.edmx</DependentUpon>
+    </None>
+    <None Include="Nagivate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Nagivate.edmx</DependentUpon>
+      <LastGenOutput>Nagivate.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

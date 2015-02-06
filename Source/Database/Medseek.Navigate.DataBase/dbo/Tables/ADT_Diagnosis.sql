@@ -1,0 +1,27 @@
+﻿CREATE TABLE [dbo].[ADT_Diagnosis] (
+    [ADTDiagnosisID]                   INT           IDENTITY (1, 1) NOT NULL,
+    [Patient_SetID]                    VARCHAR (100) NULL,
+    [SetId]                            VARCHAR (150) NULL,
+    [CodingMethod]                     VARCHAR (150) NULL,
+    [Code_Identifier]                  VARCHAR (150) NULL,
+    [Code_Text]                        VARCHAR (100) NULL,
+    [Code_NameOfCodingSystem]          VARCHAR (100) NULL,
+    [Code_AlternateIdentifier]         VARCHAR (100) NULL,
+    [Code_AlternateText]               VARCHAR (100) NULL,
+    [Code_NameOfAlternateCodingSystem] VARCHAR (100) NULL,
+    [DiagnosisDateTime]                VARCHAR (100) NULL,
+    [Type_Identifier]                  VARCHAR (150) NULL,
+    [Type_Text]                        VARCHAR (100) NULL,
+    [Type_NameOfCodingSystem]          VARCHAR (100) NULL,
+    [Type_AlternateIdentifier]         VARCHAR (100) NULL,
+    [Type_AlternateText]               VARCHAR (100) NULL,
+    [Type_NameOfAlternateCodingSystem] VARCHAR (100) NULL,
+    [Clinician_PersonIdentifier]       VARCHAR (150) NULL,
+    [Clinician_FamilyName]             VARCHAR (150) NULL,
+    [Clinician_GivenName]              VARCHAR (150) NULL,
+    [Clinician_FurtherGivenName]       VARCHAR (150) NULL,
+    [Clinician_Suffix]                 VARCHAR (150) NULL,
+    [Clinician_Prefix]                 VARCHAR (150) NULL,
+    [Clinician_Degree]                 VARCHAR (150) NULL
+);
+

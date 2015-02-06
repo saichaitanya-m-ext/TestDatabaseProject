@@ -1,0 +1,55 @@
+﻿CREATE TABLE [dbo].[DataLoad_CodeSetNPIHealthcareProviderTaxonomy] (
+    [NPI]                                            NUMERIC (10) NULL,
+    [Healthcare Provider Taxonomy Code_1]            VARCHAR (10) NULL,
+    [Healthcare Provider Taxonomy Code_2]            VARCHAR (10) NULL,
+    [Healthcare Provider Taxonomy Code_3]            VARCHAR (10) NULL,
+    [Healthcare Provider Taxonomy Code_4]            VARCHAR (10) NULL,
+    [Healthcare Provider Taxonomy Code_5]            VARCHAR (10) NULL,
+    [Healthcare Provider Taxonomy Code_6]            VARCHAR (10) NULL,
+    [Healthcare Provider Taxonomy Code_7]            VARCHAR (10) NULL,
+    [Healthcare Provider Taxonomy Code_8]            VARCHAR (10) NULL,
+    [Healthcare Provider Taxonomy Code_9]            VARCHAR (10) NULL,
+    [Healthcare Provider Taxonomy Code_10]           VARCHAR (10) NULL,
+    [Healthcare Provider Taxonomy Code_11]           VARCHAR (10) NULL,
+    [Healthcare Provider Taxonomy Code_12]           VARCHAR (10) NULL,
+    [Healthcare Provider Taxonomy Code_13]           VARCHAR (10) NULL,
+    [Healthcare Provider Taxonomy Code_14]           VARCHAR (10) NULL,
+    [Healthcare Provider Taxonomy Code_15]           VARCHAR (10) NULL,
+    [Healthcare Provider Primary Taxonomy Switch_1]  VARCHAR (1)  NULL,
+    [Healthcare Provider Primary Taxonomy Switch_2]  VARCHAR (1)  NULL,
+    [Healthcare Provider Primary Taxonomy Switch_3]  VARCHAR (1)  NULL,
+    [Healthcare Provider Primary Taxonomy Switch_4]  VARCHAR (1)  NULL,
+    [Healthcare Provider Primary Taxonomy Switch_5]  VARCHAR (1)  NULL,
+    [Healthcare Provider Primary Taxonomy Switch_6]  VARCHAR (1)  NULL,
+    [Healthcare Provider Primary Taxonomy Switch_7]  VARCHAR (1)  NULL,
+    [Healthcare Provider Primary Taxonomy Switch_8]  VARCHAR (1)  NULL,
+    [Healthcare Provider Primary Taxonomy Switch_9]  VARCHAR (1)  NULL,
+    [Healthcare Provider Primary Taxonomy Switch_10] VARCHAR (1)  NULL,
+    [Healthcare Provider Primary Taxonomy Switch_11] VARCHAR (1)  NULL,
+    [Healthcare Provider Primary Taxonomy Switch_12] VARCHAR (1)  NULL,
+    [Healthcare Provider Primary Taxonomy Switch_13] VARCHAR (1)  NULL,
+    [Healthcare Provider Primary Taxonomy Switch_14] VARCHAR (1)  NULL,
+    [Healthcare Provider Primary Taxonomy Switch_15] VARCHAR (1)  NULL,
+    [Healthcare Provider Taxonomy Group_1]           VARCHAR (70) NULL,
+    [Healthcare Provider Taxonomy Group_2]           VARCHAR (70) NULL,
+    [Healthcare Provider Taxonomy Group_3]           VARCHAR (70) NULL,
+    [Healthcare Provider Taxonomy Group_4]           VARCHAR (70) NULL,
+    [Healthcare Provider Taxonomy Group_5]           VARCHAR (70) NULL,
+    [Healthcare Provider Taxonomy Group_6]           VARCHAR (70) NULL,
+    [Healthcare Provider Taxonomy Group_7]           VARCHAR (70) NULL,
+    [Healthcare Provider Taxonomy Group_8]           VARCHAR (70) NULL,
+    [Healthcare Provider Taxonomy Group_9]           VARCHAR (70) NULL,
+    [Healthcare Provider Taxonomy Group_10]          VARCHAR (70) NULL,
+    [Healthcare Provider Taxonomy Group_11]          VARCHAR (70) NULL,
+    [Healthcare Provider Taxonomy Group_12]          VARCHAR (70) NULL,
+    [Healthcare Provider Taxonomy Group_13]          VARCHAR (70) NULL,
+    [Healthcare Provider Taxonomy Group_14]          VARCHAR (70) NULL,
+    [Healthcare Provider Taxonomy Group_15]          VARCHAR (70) NULL
+);
+
+
+GO
+CREATE UNIQUE CLUSTERED INDEX [UQ_Dataload_NPIHealthcareProviderTaxonomy_NPI]
+    ON [dbo].[DataLoad_CodeSetNPIHealthcareProviderTaxonomy]([NPI] ASC)
+    ON [FG_Codesets];
+

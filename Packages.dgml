@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="Castle.Core 3.2.2" Category="Package" Bounds="757.445,111.92,107.286666666667,25.96" Label="Castle.Core 3.2.2" />
+    <Node Id="Castle.Windsor 3.2.1" Category="Package" Bounds="747.765,55.96,126.646666666667,25.96" Label="Castle.Windsor 3.2.1" />
+    <Node Id="EntityFramework 6.1.0" Category="Package" Bounds="39.99,55.9600000000002,136.196666666667,25.96" Label="EntityFramework 6.1.0" />
+    <Node Id="Microsoft.AspNet.WebApi 5.0.0" Category="Package" Bounds="325.628333333333,55.96,184.92,25.96" Label="Microsoft.AspNet.WebApi 5.0.0" />
+    <Node Id="Microsoft.AspNet.WebApi.Client 5.0.0" Category="Package" Bounds="309.14,223.84,217.896666666667,25.96" Label="Microsoft.AspNet.WebApi.Client 5.0.0" />
+    <Node Id="Microsoft.AspNet.WebApi.Core 5.0.0" Category="Package" Bounds="311.873333333333,167.88,212.43,25.96" Label="Microsoft.AspNet.WebApi.Core 5.0.0" />
+    <Node Id="Microsoft.AspNet.WebApi.WebHost 5.0.1" Category="Package" Bounds="299.703333333333,111.92,236.77,25.96" Label="Microsoft.AspNet.WebApi.WebHost 5.0.1" />
+    <Node Id="Newtonsoft.Json 6.0.1" Category="Package" Bounds="350.361666666667,279.8,135.453333333333,25.96" Label="Newtonsoft.Json 6.0.1" />
+    <Node Id="RabbitMQ.Client 3.2.1" Category="Package" Bounds="566.558333333333,111.92,135.06,25.96" Label="RabbitMQ.Client 3.2.1" />
+    <Node Id="RabbitMQ.ServiceModel 3.2.1" Category="Package" Bounds="541.07,55.96,176.036666666667,25.96" Label="RabbitMQ.ServiceModel 3.2.1" />
+    <Node Id="Source\Database\MEDSEEK.Navigate.Database.Context" Category="Project" Bounds="0,0,216.176666666667,25.96" Label="MEDSEEK.Navigate.Database.Context" />
+    <Node Id="Source\MEDSEEK.Navigate.Framework.Microservices" Category="Project" Bounds="290.128333333333,0,255.92,25.96" Label="MEDSEEK.Navigate.Framework.Microservices" />
+    <Node Id="Source\MEDSEEK.Navigate.UserManagementService" Category="Project" Bounds="683.656666666667,0,254.863333333333,25.96" Label="MEDSEEK.Navigate.UserManagementService" />
+    <Node Id="log4net 2.0.3" Category="Package" Bounds="206.836666666667,55.9600000000002,88.5033333333333,25.96" Label="log4net 2.0.3" />
+  </Nodes>
+  <Links>
+    <Link Source="Castle.Windsor 3.2.1" Target="Castle.Core 3.2.2" Category="Package Dependency" Bounds="811.088317871094,81.9199981689453,0,21" />
+    <Link Source="Microsoft.AspNet.WebApi 5.0.0" Target="Microsoft.AspNet.WebApi.WebHost 5.0.1" Category="Package Dependency" Bounds="418.088348388672,81.9199981689453,0,21" />
+    <Link Source="Microsoft.AspNet.WebApi.Client 5.0.0" Target="Newtonsoft.Json 6.0.1" Category="Package Dependency" Bounds="418.088348388672,249.800003051758,0,20.9999847412109" />
+    <Link Source="Microsoft.AspNet.WebApi.Core 5.0.0" Target="Microsoft.AspNet.WebApi.Client 5.0.0" Category="Package Dependency" Bounds="418.088348388672,193.839996337891,0,21" />
+    <Link Source="Microsoft.AspNet.WebApi.WebHost 5.0.1" Target="Microsoft.AspNet.WebApi.Core 5.0.0" Category="Package Dependency" Bounds="418.088348388672,137.880004882813,0,21" />
+    <Link Source="RabbitMQ.ServiceModel 3.2.1" Target="RabbitMQ.Client 3.2.1" Category="Package Dependency" Bounds="630.248107910156,81.9199981689453,1.8795166015625,21.0357131958008" />
+    <Link Source="Source\Database\MEDSEEK.Navigate.Database.Context" Target="EntityFramework 6.1.0" Category="Installed Package" Bounds="108.088333129883,25.9599990844727,0,21" />
+    <Link Source="Source\MEDSEEK.Navigate.Framework.Microservices" Target="Castle.Windsor 3.2.1" Category="Installed Package" Bounds="512.141845703125,25.9599990844727,226.721008300781,31.8138580322266" />
+    <Link Source="Source\MEDSEEK.Navigate.Framework.Microservices" Target="Microsoft.AspNet.WebApi 5.0.0" Category="Installed Package" Bounds="418.088348388672,25.9599990844727,0,21" />
+    <Link Source="Source\MEDSEEK.Navigate.Framework.Microservices" Target="RabbitMQ.ServiceModel 3.2.1" Category="Installed Package" Bounds="467.030090332031,25.9599990844727,104.417236328125,27.6928443908691" />
+    <Link Source="Source\MEDSEEK.Navigate.Framework.Microservices" Target="log4net 2.0.3" Category="Installed Package" Bounds="298.357849121094,25.9599990844727,80.9945983886719,27.1404647827148" />
+    <Link Source="Source\MEDSEEK.Navigate.UserManagementService" Target="Castle.Windsor 3.2.1" Category="Installed Package" Bounds="811.088317871094,25.9599990844727,0,21" />
+  </Links>
+  <Categories>
+    <Category Id="Installed Package" />
+    <Category Id="Package" />
+    <Category Id="Package Dependency" />
+    <Category Id="Project" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="GraphDirection" DataType="Microsoft.VisualStudio.Diagrams.Layout.LayoutOrientation" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+  </Properties>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Project" ValueLabel="True">
+      <Condition Expression="HasCategory('Project')" />
+      <Setter Property="Background" Value="Blue" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Package Dependency" ValueLabel="True">
+      <Condition Expression="HasCategory('Package Dependency')" />
+      <Setter Property="Background" Value="Yellow" />
+    </Style>
+  </Styles>
+</DirectedGraph>

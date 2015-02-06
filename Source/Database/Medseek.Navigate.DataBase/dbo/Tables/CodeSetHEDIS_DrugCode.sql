@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[CodeSetHEDIS_DrugCode] (
+    [HEDIS_DrugCodeID]     INT            IDENTITY (1, 1) NOT NULL,
+    [NDCCode]              VARCHAR (30)   NOT NULL,
+    [BrandName]            VARCHAR (100)  NOT NULL,
+    [GenericProductName]   VARCHAR (1000) NULL,
+    [Route]                VARCHAR (60)   NULL,
+    [CategoryName]         VARCHAR (100)  NULL,
+    [Drug_ID]              VARCHAR (30)   NULL,
+    [DrugCodeID]           INT            NULL,
+    [ECTHedisTableID]      INT            NOT NULL,
+    [VersionYear]          INT            NOT NULL,
+    [StatusCode]           VARCHAR (1)    CONSTRAINT [DF_CodeSetHEDIS_DrugCode_StatusCode] DEFAULT ('A') NULL,
+    [DataSourceID]         [dbo].[KeyID]  NULL,
+    [DataSourceFileID]     [dbo].[KeyID]  NULL,
+    [CreatedByUserID]      INT            NOT NULL,
+    [CreatedDate]          DATETIME       CONSTRAINT [DF_CodeSetHEDIS_DrugCode_CreatedDate] DEFAULT (getdate()) NOT NULL,
+    [LastModifiedByUserID] INT            NULL,
+    [LastModifiedDate]     DATETIME       NULL,
+    CONSTRAINT [PK_CodeSetHEDIS_DrugCode] PRIMARY KEY CLUSTERED ([HEDIS_DrugCodeID] ASC) ON [FG_Codesets],
+    CONSTRAINT [FK_CodeSetHEDIS_DrugCode_CodeSetDataSource] FOREIGN KEY ([DataSourceID]) REFERENCES [dbo].[CodeSetDataSource] ([DataSourceId]),
+    CONSTRAINT [FK_CodeSetHEDIS_DrugCode_CodeSetECTHedisTable] FOREIGN KEY ([ECTHedisTableID]) REFERENCES [dbo].[CodeSetECTHedisTable] ([ECTHedisTableID]),
+    CONSTRAINT [FK_CodeSetHEDIS_DrugCode_DataSourceFile] FOREIGN KEY ([DataSourceFileID]) REFERENCES [dbo].[DataSourceFile] ([DataSourceFileID]),
+    CONSTRAINT [UQ_CodeSetHEDIS_DrugCode_NDCCode] UNIQUE NONCLUSTERED ([NDCCode] ASC, [Drug_ID] ASC, [ECTHedisTableID] ASC, [VersionYear] ASC) WITH (FILLFACTOR = 100) ON [FG_Codesets_NCX]
+);
+

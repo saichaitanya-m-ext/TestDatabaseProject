@@ -1,0 +1,3 @@
+﻿CREATE TYPE [dbo].[STID]
+    FROM INT NULL;
+
